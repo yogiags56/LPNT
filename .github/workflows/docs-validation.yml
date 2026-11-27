@@ -35,5 +35,5 @@ jobs:
             echo "OK: $file"
           done
 
-      - name: Check whitespace errors
-        run: git diff --check
+      - name: Check whitespace errors in the submitted commit
+        run: git diff --check HEAD^ HEAD
