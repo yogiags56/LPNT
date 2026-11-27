@@ -36,6 +36,7 @@ The first milestone is an ARM64 source and platform audit of LiberNT, followed b
 See:
 - [Roadmap](docs/ROADMAP.md)
 - [Architecture overview](docs/ARCHITECTURE.md)
+- [LiberNT ARM64 feasibility audit](docs/LIBERNT-ARM64-AUDIT.md)
 
 ## Upstream and licensing
 
