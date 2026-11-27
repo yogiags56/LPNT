@@ -18,17 +18,19 @@ This roadmap is staged around technical risk. The project must prove that the up
 
 **Milestone ID: LPN-001**
 
-- [ ] Pin the exact upstream commit to be audited.
-- [ ] Map ARM64 boot flow: firmware, bootloader, kernel, HAL, and early userspace.
-- [ ] Inventory supported ARM64 boards and identify which are actually tested.
-- [ ] Audit display and graphics paths, including framebuffer/GOP and available acceleration.
-- [ ] Audit touch/input support and identify missing touchscreen drivers.
-- [ ] Audit I2C, SPI, GPIO, UART, USB, SD/eMMC and other relevant buses.
-- [ ] Audit storage, filesystem, networking, audio, and power-management paths.
-- [ ] Identify what is absent for cellular modem, SIM, telephony, SMS, mobile data, camera, sensors, GPS, battery charging, thermal control, suspend, and resume.
-- [ ] Produce a capability matrix with source references and confidence levels.
+- [x] Pin the exact upstream commit to be audited: `20ac4b4b9b4bc9253088959a6cd1fe5a9956bec9`.
+- [x] Map ARM64 bootloader source and ACPI/PSCI handoff at source level.
+- [x] Inspect ARM64 HAL, GIC, DMA, PCI routing, and secondary CPU startup source.
+- [x] Inventory initial ARM64 board/display evidence, including Raspberry Pi 5.
+- [x] Audit the GOP framebuffer and RPi5 display-only miniport paths.
+- [x] Record touchscreen/HID evidence and its explicit unsupported test skip.
+- [x] Identify major mobile gaps: modem/SIM/telephony, camera, sensors/GPS, battery/charging, thermal, and phone-grade suspend/resume.
+- [x] Produce a preliminary capability matrix with source references and confidence levels.
+- [ ] Build and boot ARM64 images in a virtual environment and on a documented board.
+- [ ] Enumerate all ARM64 HAL stubs and unimplemented paths with call sites and impact.
+- [ ] Validate display, input, storage, USB, and power on Raspberry Pi 5 or another selected board.
 
-**Exit criteria:** a reproducible audit report tied to an upstream commit, with no unverified phone-readiness claims.
+**Exit criteria:** a reproducible audit report tied to an upstream commit, with no unverified phone-readiness claims. Source-level review is complete for this preliminary pass; hardware/build validation remains open.
 
 ## Phase 2 — Target device and bring-up strategy
 
