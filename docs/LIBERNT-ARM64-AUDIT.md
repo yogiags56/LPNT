@@ -1,8 +1,8 @@
 # LiberNT ARM64 Feasibility Audit — Initial Evidence
 
-**Status:** Preliminary source/documentation audit  
-**Audited upstream:** `LiberNT/LiberNT`, default branch `master`  
-**Audit date:** 2026-11-28  
+**Status:** Preliminary source/documentation audit
+**Audited upstream:** `LiberNT/LiberNT`, default branch `master`
+**Audit date:** 2026-11-28
 **Scope:** Public upstream README and repository tree. This is not a build or hardware test.
 
 ## 1. Executive summary
