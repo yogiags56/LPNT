@@ -1,5 +1,7 @@
 # LiberPhoneNT
 
+![LiberPhoneNT official logo](assets/logo.png)
+
 > **Working project name.** LiberPhoneNT is a provisional name and is not a final product or brand decision.
 
 LiberPhoneNT is an experimental mobile operating-system project built on top of [LiberNT](https://github.com/LiberNT/LiberNT), with a smartphone-oriented system architecture and a user experience inspired by the Metro design language and Windows Phone 8.1.
