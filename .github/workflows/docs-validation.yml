@@ -1,0 +1,39 @@
+name: Documentation validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-docs:
+    name: Validate project documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify required documents
+        shell: bash
+        run: |
+          set -euo pipefail
+          required_files=(
+            "README.md"
+            "docs/ROADMAP.md"
+            "docs/ARCHITECTURE.md"
+          )
+          for file in "${required_files[@]}"; do
+            if [[ ! -s "$file" ]]; then
+              echo "::error file=$file::Required documentation is missing or empty"
+              exit 1
+            fi
+            echo "OK: $file"
+          done
+
+      - name: Check whitespace errors
+        run: git diff --check
