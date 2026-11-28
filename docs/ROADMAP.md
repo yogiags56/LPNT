@@ -27,10 +27,11 @@ This roadmap is staged around technical risk. The project must prove that the up
 - [x] Identify major mobile gaps: modem/SIM/telephony, camera, sensors/GPS, battery/charging, thermal, and phone-grade suspend/resume.
 - [x] Produce a preliminary capability matrix with source references and confidence levels.
 - [ ] Build and boot ARM64 images in a virtual environment and on a documented board.
-- [ ] Enumerate all ARM64 HAL stubs and unimplemented paths with call sites and impact.
+- [x] Inventory explicit stubs and unimplemented entry points in `halarm64.c`, with source evidence and preliminary impact assessment.
+- [ ] Complete call-site/call-graph analysis for every identified stub and audit the remaining ARM64 HAL source files.
 - [ ] Validate display, input, storage, USB, and power on Raspberry Pi 5 or another selected board.
 
-**Exit criteria:** a reproducible audit report tied to an upstream commit, with no unverified phone-readiness claims. Source-level review is complete for this preliminary pass; hardware/build validation remains open.
+**Exit criteria:** a reproducible audit report tied to an upstream commit, with no unverified phone-readiness claims. The initial source review and a focused `halarm64.c` deep audit are documented; full call-graph and cross-file HAL review plus hardware/build validation remain open.
 
 ## Phase 2 — Target device and bring-up strategy
 
